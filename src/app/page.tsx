@@ -1,6 +1,6 @@
 "use client";
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Skeleton from "@mui/material/Skeleton";
 
 function HomePageLoadingSkeleton() {
@@ -10,19 +10,19 @@ function HomePageLoadingSkeleton() {
       <Skeleton
         sx={{
           display: { xs: "none", md: "block" },
+          width: 210,
+          height: "100vh",
         }}
         variant="rectangular"
-        width={210}
-        height="100vh"
       />
       {/* AppNavBar */}
       <Skeleton
         sx={{
-          display: { xs: "auto", md: "none" },
+          display: { md: "none" },
+          width: "100%",
+          height: 60,
         }}
         variant="rectangular"
-        width="100%"
-        height={60}
       />
       {/* Header */}
       <Box
@@ -41,9 +41,6 @@ function HomePageLoadingSkeleton() {
   );
 }
 
-
 export default function Home() {
-  return (
-    <HomePageLoadingSkeleton />
-  );
+  return <HomePageLoadingSkeleton />;
 }
